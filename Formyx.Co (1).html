@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMYX.CO | Official Links & Catalog</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brandDark: '#121212',
+                        brandCard: 'rgba(255, 255, 255, 0.07)',
+                        brandCardHover: 'rgba(255, 255, 255, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #4b5563 0%, #1f2937 50%, #111827 100%);
+            min-height: 100vh;
+            color: #ffffff;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111827;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4b5563;
+            border-radius: 4px;
+        }
+        /* Glassmorphism Effect */
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .glass-dark {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased flex flex-col items-center justify-between min-h-screen p-4 sm:p-6">
+
+    <!-- Toast Notification (Replacement for alert) -->
+    <div id="toast" class="fixed top-5 left-1/2 transform -translate-x-1/2 bg-white text-gray-900 px-5 py-3 rounded-full shadow-2xl transition-all duration-300 opacity-0 pointer-events-none z-50 flex items-center gap-2 font-medium text-sm">
+        <i class="fa-solid fa-circle-check text-green-600 text-lg"></i>
+        <span id="toast-message">Tautan berhasil disalin!</span>
+    </div>
+
+    <!-- Modal QR Code -->
+    <div id="qr-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center hidden transition-opacity duration-300">
+        <div class="bg-gray-900 border border-gray-700 p-6 rounded-2xl max-w-xs w-full text-center relative shadow-2xl">
+            <button onclick="toggleQRModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 class="text-lg font-bold mb-4 text-white">Scan QR Code</h3>
+            <div class="bg-white p-4 rounded-xl inline-block mb-4 shadow-inner">
+                <!-- Inline SVG QR Code Generator Mockup -->
+                <svg class="w-44 h-44" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="100" height="100" fill="white"/>
+                    <path d="M10 10H40V40H10V10ZM15 15V35H35V15H15Z" fill="black"/>
+                    <path d="M20 20H30V30H20V20Z" fill="black"/>
+                    <path d="M60 10H90V40H60V10ZM65 15V35H85V15H65Z" fill="black"/>
+                    <path d="M70 20H80V30H70V20Z" fill="black"/>
+                    <path d="M10 60H40V90H10V60ZM15 65V85H35V65H15Z" fill="black"/>
+                    <path d="M20 70H30V80H20V70Z" fill="black"/>
+                    <path d="M50 10H55V25H50V10Z" fill="black"/>
+                    <path d="M45 35H55V40H45V35Z" fill="black"/>
+                    <path d="M60 50H75V55H60V50Z" fill="black"/>
+                    <path d="M80 50H90V65H80V50Z" fill="black"/>
+                    <path d="M50 60H65V70H50V60Z" fill="black"/>
+                    <path d="M70 70H90V75H70V70Z" fill="black"/>
+                    <path d="M50 80H60V90H50V80Z" fill="black"/>
+                    <path d="M75 80H90V90H75V80Z" fill="black"/>
+                </svg>
+            </div>
+            <p class="text-xs text-gray-400">Pindai kode untuk membuka FORMYX.CO di perangkat seluler Anda.</p>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <main class="w-full max-w-xl flex flex-col items-center my-6">
+
+
+            <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full border-4 border-white flex items-center justify-center bg-black overflow-hidden">
+    <img src="https://instagram.fcgk9-1.fna.fbcdn.net/v/t51.82787-19/617920623_17856320436599214_8026428913390996945_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ig_cache_key=GG_41CSueZ6UOnA-ANFNmCWSmmNvbmNDAQAB0j-ccb7-5&ccb=7-5&_nc_sid=669407&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy44OTIuQzMifQ%3D%3D&_nc_ohc=pMu2tbv7a-YQ7kNvwFUpm1G&_nc_oc=AdqV-g0xwSJq_roFKx7OVP7HM4PPAV2C4KnjLfCjQZWhnK7W4nLpxaUelwQADtYozXy2OgjgNSuo_VgBCnh9FRyu&_nc_zt=24&_nc_ht=instagram.fcgk9-1.fna&_nc_gid=TnbUrriM5dBn2dfvoXiZJg&_nc_ss=7b6a8&oh=00_AQQUa7AmwvkrnYe14yAWk2l2HdSoKptsm2Fl7HgbpFJN6A&oe=6AF07141" class="w-full h-full object-cover" alt="Logo">
+</div>
+            <!-- Profile Title & Bio -->
+            <h1 class="text-xl sm:text-2xl font-extrabold tracking-wider text-white uppercase mb-1">FORMYX.CO</h1>
+            <p class="text-xs sm:text-sm text-gray-300 font-medium">Urban & Streetwear Fashion Brand</p>
+        </header>
+
+
+        <!-- MAIN LINK BUTTONS SECTION (Identical layout to screenshot) -->
+        <section class="w-full flex flex-col gap-4 mb-10 px-2 sm:px-0">
+            
+            <!-- Instagram Link Button -->
+            <a href="https://www.instagram.com/formyx.co?utm_source=ig_web_button_share_sheet&xtok=ZDNlZDc0MzIxNw==" target="_blank" class="w-full bg-white hover:bg-gray-100 text-gray-900 rounded-full p-2 pr-5 flex items-center justify-between shadow-lg transition-all duration-300 transform hover:-translate-y-1 group">
+                <div class="flex items-center gap-3">
+                    <!-- Logo Icon Left -->
+                    <div class="w-12 h-12 rounded-full bg-black flex items-center justify-center text-white font-extrabold text-xs overflow-hidden shrink-0 border border-gray-300">
+                        <svg class="w-10 h-10" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="100" cy="100" r="90" stroke="white" stroke-width="8"/>
+                            <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" fill="white" font-family="'Arial Black', sans-serif" font-weight="900" font-size="32">FORMYX</text>
+                        </svg>
+                    </div>
+                    <!-- Label -->
+                    <span class="font-bold text-sm sm:text-base tracking-tight text-gray-900 group-hover:text-black">www.instagram.com</span>
+                </div>
+                <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center p-2 shadow-sm">
+                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQvsXFoiZul2zE5CgOKg4YxtuEF8yuP-TT3EnrkoVUYw&s=10" alt="Shopee Logo" class="w-full h-full object-contain">
+               </div>
+
+              
+
+            <!-- Shopee Link Button -->
+            <a href="https://id.shp.ee/MBh57u96" target="_blank" class="w-full bg-white hover:bg-gray-100 text-gray-900 rounded-full p-2 pr-5 flex items-center justify-between shadow-lg transition-all duration-300 transform hover:-translate-y-1 group">
+                <div class="flex items-center gap-3">
+                    <!-- Logo Icon Left -->
+                    <div class="w-12 h-12 rounded-full bg-black flex items-center justify-center text-white font-extrabold text-xs overflow-hidden shrink-0 border border-gray-300">
+                        <svg class="w-10 h-10" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="100" cy="100" r="90" stroke="white" stroke-width="8"/>
+                            <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" fill="white" font-family="'Arial Black', sans-serif" font-weight="900" font-size="32">FORMYX</text>
+                        </svg>
+                    </div>
+                    <!-- Label -->
+                    <span class="font-bold text-sm sm:text-base tracking-tight text-gray-900 group-hover:text-black">shopee.co.id</span>
+                </div>
+                <!-- Logo Icon Left -->
+               <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center p-2 shadow-sm">
+                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5OiZ7Cmd7ipnoCZKgFVJplSKYpGW6j3OWfbxk5ABr2XcGf0tcZhPUas4l&s=10 alt="Shopee Logo" class="w-full h-full object-contain">
+               </div>
+                         
+            </a>
+
+        </section>
+
+
+        <!-- PRODUCT CATALOG SECTION (FITUR BARU) -->
+        <section class="w-full px-2 sm:px-0">
+            <!-- Section Header -->
+            <div class="flex flex-col sm:flex-row items-center justify-between mb-5 border-b border-gray-700/60 pb-3 gap-3">
+                <h2 class="text-lg font-bold tracking-wide flex items-center gap-2">
+                    <i class="fa-solid fa-shirt text-gray-400"></i> KATALOG PRODUK
+                </h2>
+                <!-- Category Filters -->
+                <div class="flex gap-2 text-xs font-semibold">
+                    
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="grid grid-cols-2 gap-3 sm:gap-4" id="product-grid">
+                
+                <!-- Product Card 1 -->
+                <div class="product-item tops glass-dark rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-gray-400 transition-all duration-300">
+                    <div class="relative overflow-hidden aspect-square bg-gray-800">
+                        <img src="https://down-id.img.susercontent.com/file/id-11134207-822wi-mns6wdxc969y8a@resize_w900_nl.webp" 
+                             alt="Heavyweight Vintage Tee" 
+                             class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/400x400/1f2937/ffffff?text=Heavyweight+Tee'">
+                    </div>
+                    <div class="p-3 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-bold text-xs sm:text-sm text-white line-clamp-1">Workshirt Zipper Boxy Industrial Engineering</h3>
+                            <p class="text-xs text-gray-400 mb-2 font-medium">Rp 185.650</p>
+                        </div>
+                        <a href="https://id.shp.ee/c85swTYZ" target="_blank" class="w-full bg-white hover:bg-gray-200 text-gray-900 font-bold text-xs py-2 rounded-xl text-center flex items-center justify-center gap-1.5 transition-colors shadow">
+                            <i class="fa-solid fa-bag-shopping"></i> Beli di Shopee
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-item tops glass-dark rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-gray-400 transition-all duration-300">
+                    <div class="relative overflow-hidden aspect-square bg-gray-800">
+                        <img src="https://down-id.img.susercontent.com/file/id-11134207-822ws-moexn0mnrnrj45@resize_w900_nl.webp" 
+                             alt="Oversized Boxy Hoodie" 
+                             class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/400x400/1f2937/ffffff?text=Boxy+Hoodie'">
+                    </div>
+                    <div class="p-3 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-bold text-xs sm:text-sm text-white line-clamp-1">Workshirt Zipper Boxy Electrical Engineering </h3>
+                            <p class="text-xs text-gray-400 mb-2 font-medium">Rp 185.650</p>
+                        </div>
+                        <a href="https://id.shp.ee/AtB9H6h4" target="_blank" class="w-full bg-white hover:bg-gray-200 text-gray-900 font-bold text-xs py-2 rounded-xl text-center flex items-center justify-center gap-1.5 transition-colors shadow">
+                            <i class="fa-solid fa-bag-shopping"></i> Beli di Shopee
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="product-item bottoms glass-dark rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-gray-400 transition-all duration-300">
+                    <div class="relative overflow-hidden aspect-square bg-gray-800">
+                        <img src="https://down-id.img.susercontent.com/file/id-11134207-822ws-mp4rjp1swyrz2c@resize_w900_nl.webp" 
+                             alt="Tactical Cargo Pants" 
+                             class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/400x400/1f2937/ffffff?text=Cargo+Pants'">
+                    </div>
+                    <div class="p-3 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-bold text-xs sm:text-sm text-white line-clamp-1">Workshirt Zipper Boxy Law & Advocate </h3>
+                            <p class="text-xs text-gray-400 mb-2 font-medium">Rp185.650</p>
+                        </div>
+                        <a href="https://id.shp.ee/xtyWgHQP" target="_blank" class="w-full bg-white hover:bg-gray-200 text-gray-900 font-bold text-xs py-2 rounded-xl text-center flex items-center justify-center gap-1.5 transition-colors shadow">
+                            <i class="fa-solid fa-bag-shopping"></i> Beli di Shopee
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="product-item tops glass-dark rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-gray-400 transition-all duration-300">
+                    <div class="relative overflow-hidden aspect-square bg-gray-800">
+                        <img src="https://down-id.img.susercontent.com/file/id-11134207-822wg-mns6z6hbe51id5@resize_w900_nl.webp" 
+                             alt="Graphic Sweatshirt" 
+                             class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/400x400/1f2937/ffffff?text=Graphic+Sweatshirt'">
+                    </div>
+                    <div class="p-3 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-bold text-xs sm:text-sm text-white line-clamp-1">Workshirt Zipper Boxy Civil Engineering</h3>
+                            <p class="text-xs text-gray-400 mb-2 font-medium">Rp 185.650</p>
+                        </div>
+                        <a href="https://id.shp.ee/LCZG83PC" target="_blank" class="w-full bg-white hover:bg-gray-200 text-gray-900 font-bold text-xs py-2 rounded-xl text-center flex items-center justify-center gap-1.5 transition-colors shadow">
+                            <i class="fa-solid fa-bag-shopping"></i> Beli di Shopee
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    
+       
+            
+            
+            <span class="tracking-tight text-base font-bold">Formyx.Co</span>
+        </a>
+    </footer>
+
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Clipboard Copy Logic
+        function copyToClipboard(text, message) {
+            const tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            
+            try {
+                document.execCommand('copy');
+                showToast(message || 'Link berhasil disalin ke clipboard!');
+            } catch (err) {
+                showToast('Gagal menyalin link.');
+            }
+            
+            document.body.removeChild(tempInput);
+        }
+
+        // Custom Toast Notification
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toast-message');
+            toastMessage.textContent = msg;
+            
+            toast.classList.remove('opacity-0', 'pointer-events-none');
+            toast.classList.add('opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('opacity-100');
+                toast.classList.add('opacity-0', 'pointer-events-none');
+            }, 2500);
+        }
+
+        // QR Code Modal Toggle
+        function toggleQRModal() {
+            const modal = document.getElementById('qr-modal');
+            if (modal.classList.contains('hidden')) {
+                modal.classList.remove('hidden');
+            } else {
+                modal.classList.add('hidden');
+            }
+        }
+
+        // Product Category Filter Logic
+        function filterProducts(category) {
+            const items = document.querySelectorAll('.product-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // Reset active button styling
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-white', 'text-gray-900');
+                btn.classList.add('glass-dark', 'text-gray-300');
+            });
+
+            // Set selected button styling
+            const activeBtn = document.getElementById(`btn-${category}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('glass-dark', 'text-gray-300');
+                activeBtn.classList.add('bg-white', 'text-gray-900');
+            }
+
+            // Filter item visibility
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
